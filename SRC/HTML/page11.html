@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>NAVBAR LATERAL</title>
+    <link rel="stylesheet" href="../STYLES/page11.css">
+    <link rel="stylesheet" href="../STYLES/pagination.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<body>
+    <div class="pagination-container"><div class="pagination" id="pagination-container"></div></div>
+<!------------------------------------------------------------------------------------->
+<div class="menuToggle"></div>
+<div class="sidebar">
+    <ul>
+        <li class="logo" style="--bg:#333;">
+            <a href="#">
+                <div class="icon">
+                    <ion-icon name="logo-apple"></ion-icon>
+                </div>
+                <div class="text">Website Logo</div>
+            </a>
+        </li>
+        <div class="Menulist">
+            <li style="--bg:#F44336;" class="active">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+                <div class="text">Home</div>
+                </a>
+            </li>
+            <li style="--bg:#FFA117;">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </div>
+                <div class="text">Profile</div>
+                </a>
+            </li>
+            <li style="--bg:#0FC70F;">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                </div>
+                <div class="text">Inbox</div>
+                </a>
+            </li>
+            <li style="--bg:#2196F3;">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="bar-chart-outline"></ion-icon>
+                </div>
+                <div class="text">Analytics</div>
+                </a>
+            </li>
+            <li style="--bg:#B145E9;">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+                <div class="text">Order</div>
+                </a>
+            </li>
+            <li style="--bg:#E91E63;">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </div>
+                <div class="text">Settings</div>
+                </a>
+            </li>
+        </div>
+        <div class="botton">
+            <li style="--bg:#333;">
+                <a href="#">
+                <div class="icon">
+                    <div class="ingBx">
+                    <img src="../IMAGES/PERFIL.webp">
+                </div>
+            </div>
+            <div class="text">JVGREENN</div>
+            </a>
+            </li>
+            <li style="--bg:#333;">
+                <a href="#">
+                <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <div class="text">Logout</div>
+                </a>
+            </li>
+        </div>
+    </ul>
+</div>
+<script>
+    let menuToggle = document.querySelector('.menuToggle');
+let sidebar = document.querySelector('.sidebar');
+
+menuToggle.onclick = function() {
+    menuToggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
+}
+
+let Menulist = document.querySelectorAll('.Menulist li');
+
+function activeLink() {
+    Menulist.forEach((item) => item.classList.remove('active'));
+    this.classList.add('active');
+}
+Menulist.forEach((item) => item.addEventListener('click', activeLink));
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!------------------------------------------------------------------------------------------------>
+    <script src="../javascript/pagination.js"></script>
+</body>
+</html>

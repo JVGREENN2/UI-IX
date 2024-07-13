@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{height: 100vh;background: #29293D;}
+.glass-effect{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);}
+
+.glass-effect.transparent{background: rgba(255, 255, 255, .1);}
+.glass-effect.black{background: rgba(0, 0, 0, .5);}
+.glass-effect.white{background: rgba(255, 255, 255, .9);}
+.glass-effect.red{background: rgba(255, 0, 0, .5);}
+.glass-effect.yellow{background: rgba(255, 255, 0, .5);}
+.glass-effect.orange{background: rgba(255, 165, 0, .5);}
+.glass-effect.purple{background: rgba(128, 0, 128, .5);}
+.glass-effect.pink{background: rgba(255, 192, 203, .5);}
+.glass-effect.light-green{background: rgba(144, 238, 144, .5);}
+.glass-effect.dark-green{background: rgba(0, 100, 0, .5);}
+.glass-effect.light-blue{background: rgba(173, 216, 230, .5);}
+.glass-effect.dark-blue{background: rgba(0, 0, 139, .5);}
+.glass-effect.brown{background: rgba(165, 42, 42, .5);}

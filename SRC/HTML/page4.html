@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ABAS INTERATIVA(TABS)</title>
+    <link rel="stylesheet" href="../STYLES/pagination.css">
+    <link rel="stylesheet" href="../STYLES/page4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<body>
+    <div class="pagination-container"><div class="pagination" id="pagination-container"></div></div>
+<!------------------------------------------------------------------------------------------------------>
+<div id="container">
+    <div class="tab-buttons">
+        <button class="tab-btn active" content-id="home">
+            Home
+        </button>
+
+        <button class="tab-btn" content-id="services">
+            Services
+        </button>
+
+        <button class="tab-btn" content-id="contacts">
+            Contacts
+        </button>
+
+        <button class="tab-btn" content-id="location">
+            Location
+        </button>
+
+        <button class="tab-btn" content-id="about">
+            About
+        </button>
+    </div>
+
+
+        <div class="content" id="home">
+            <img src="../IMAGES/home.svg" class="content-img" alt="home image">
+
+            <div class="infos">
+                <h1 class="content-title">
+                    Home
+                </h1>
+
+                <p class="content-description">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
+                </p>
+            </div>
+        </div>
+
+        <div class="content" id="services">
+            <img src="../IMAGES/services.svg" class="content-img" alt="services image">
+
+            <div class="infos">
+                <h1 class="content-title">
+                    Services
+                </h1>
+
+                <p class="content-description">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
+                </p>
+            </div>
+        </div>
+
+        <div class="content" id="contacts">
+            <img src="../IMAGES/contacts.svg" class="content-img" alt="contacts image">
+
+            <div class="infos">
+                <h1 class="content-title">
+                    Contacts
+                </h1>
+
+                <p class="content-description">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
+                </p>
+            </div>
+        </div>
+
+        <div class="content" id="location">
+            <img src="../IMAGES/location.svg" class="content-img" alt="location image">
+
+            <div class="infos">
+                <h1 class="content-title">
+                    Location
+                </h1>
+
+                <p class="content-description">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
+                </p>
+            </div>
+        </div>
+
+        <div class="content" id="about">
+            <img src="../IMAGES/about.svg" class="content-img" alt="about image">
+
+            <div class="infos">
+                <h1 class="content-title">
+                    About
+                </h1>
+
+                <p class="content-description">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
+                </p>
+            </div>
+        </div>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+tabs.forEach(tab => tab.addEventListener('click', () => tabClicked(tab)));
+
+const tabClicked = (tab) => {
+tabs.forEach(tab => tab.classList.remove('active'));
+tab.classList.add('active');
+const contents = document.querySelectorAll('.content');
+contents.forEach(content => content.classList.remove('show'));
+const contentId = tab.getAttribute('content-id');
+const content = document.getElementById(contentId);
+content.classList.add('show');
+}
+const currentActiveTab = document.querySelector('.tab-btn.active');
+tabClicked(currentActiveTab);
+</script>
+    <!---------------------------------------------------------------------------------------------->
+    <script src="../javascript/pagination.js"></script>
+</body>
+</html>

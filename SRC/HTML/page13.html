@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cronômetro com JS</title>
+    <link rel="stylesheet" href="../STYLES/pagination.css">
+    <link rel="stylesheet" href="../STYLES/page13.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<body>
+    <div class="pagination-container"><div class="pagination" id="pagination-container"></div></div>
+<!------------------------------------------------------------------------------------------------->
+<div id="time">
+    <div class="circle" style="--clr: #1EB9FF;">
+        <svg>
+            <circle cx="70" cy="70" r="70" id="dd"></circle>
+        </svg>
+        <div id="days">00<br><span>DIAS</span></div>
+    </div>
+    <div class="circle" style="--clr: #FF2972;">
+        <svg>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+        </svg>
+        <div id="hours">00<br><span>HORAS</span></div>
+    </div>
+    <div class="circle" style="--clr: #FEE800;">
+        <svg>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+        </svg>
+        <div id="minutes">00<br><span>MINUTOS</span></div>
+    </div>
+    <div class="circle" style="--clr: #04FC43;">
+        <svg>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+        </svg>                
+        <div id="seconds">00<br><span>SEGUNDOS</span></div>
+    </div>
+</div>
+<!------------------------------------------------------------------------------------------------->
+<script src="../javascript/page13.js"></script>
+<script src="../javascript/pagination.js"></script>
+</body>
+</html>
